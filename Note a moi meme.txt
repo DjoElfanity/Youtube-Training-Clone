@@ -1,0 +1,37 @@
+
+
+//Etape 1 :
+*rendre le screen 100% et pouvoir scroller
+normalement --> max-h-screen 
+*Rendre sa sous forme de colone 
+*Creer le PageHeader
+*Rajout du Gap pour le responsive
+*Création de 3 sections dans dans Page Header
+*Rajouter un flex-shrink pour eviter l'ecrasement
+
+Informations : 
+PageHeader --> contient 3 sections selon le responsive
+
+Telechargement d'icone : 
+--> npm i lucide-react
+Telechargement pour simplifier l'utilisation CSS
+--> npm i class-variance-authority tailwind merge
+
+
+
+CSS :
+py --> padding top bottom 
+px --> padding left right
+
+focus --> par exemple une fois qu'on clique sur 
+un input il change de state 
+exemple : focus:boder-blue-500 --> une fois qu'on cliquera
+sur l'input le border deviendra bleu
+
+
+
+video :
+https://www.youtube.com/watch?v=ymGB1lqP1CM --< 17:39
+
+
+
