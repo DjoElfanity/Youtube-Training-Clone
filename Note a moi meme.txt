@@ -23,7 +23,7 @@ CSS :
 py --> padding top bottom 
 px --> padding left right
 
-focus --> par exemple une fois qu'on clique sur 
+focus --> par example une fois qu'on clique sur 
 un input il change de state 
 exemple : focus:boder-blue-500 --> une fois qu'on cliquera
 sur l'input le border deviendra bleu
