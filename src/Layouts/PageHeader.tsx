@@ -1,12 +1,26 @@
-import { Bell, MenuIcon, Mic, Search, Upload, User } from "lucide-react";
+import {
+  ArrowLeft,
+  Bell,
+  MenuIcon,
+  Mic,
+  Search,
+  Upload,
+  User,
+} from "lucide-react";
+import { useState } from "react";
 import { Button } from "../Components/Button";
 import Logo from "../assets/Logo.png";
 
 function PageHeader() {
+  const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
   return (
-    <div className="flex gap-10 lg:gap-20 justify-between">
+    <div className="flex gap-10 lg:gap-20 justify-between mb-4 mt-2">
       {/* Left Part */}
-      <div className="flex gap-4 items-center flex-shrink-0 ">
+      <div
+        className={` gap-4 items-center flex-shrink-0 ${
+          showFullWidthSearch ? "hidden" : "flex"
+        } `}
+      >
         <Button variant="ghost" size="icon">
           <MenuIcon />
         </Button>
@@ -18,7 +32,23 @@ function PageHeader() {
 
       {/* Middle Part */}
 
-      <form className=" md:flex   hidden  gap-4 flex-grow items-center justify-center">
+      <form
+        className={`     gap-4 flex-grow items-center justify-center ${
+          showFullWidthSearch ? "flex" : "hidden md:flex"
+        } `}
+      >
+        <Button
+          onClick={() => setShowFullWidthSearch(false)}
+          variant={"ghost"}
+          type="button"
+          size={"icon"}
+          className={`flex-shrink-0 hidden ${
+            showFullWidthSearch ? "flex" : "hidden"
+          } `}
+        >
+          <ArrowLeft />
+        </Button>
+
         <div className="flex  flex-grow max-w-[600px]">
           <input
             type="search"
@@ -38,8 +68,17 @@ function PageHeader() {
       </form>
 
       {/* Right Part */}
-      <div className="flex md:gap-2 flex-shrink-0 ">
-        <Button size={"icon"} variant={"ghost"} className="md:hidden">
+      <div
+        className={`md:gap-2 flex-shrink-0 ${
+          showFullWidthSearch ? "hidden" : "flex"
+        } `}
+      >
+        <Button
+          onClick={() => setShowFullWidthSearch(true)}
+          size={"icon"}
+          variant={"ghost"}
+          className="md:hidden"
+        >
           <Search />
         </Button>
         <Button size={"icon"} variant={"ghost"} className="md:hidden">
