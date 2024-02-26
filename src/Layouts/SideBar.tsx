@@ -1,11 +1,12 @@
 import { Clapperboard, Home, Library, Repeat } from "lucide-react";
-import { ElementType } from "react";
+import { ElementType, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { buttonStyles } from "../Components/Button";
 
 export function SideBar() {
+  const [isSideBarVisible, setIsSideBarVisible] = useState(false);
   return (
-    <aside className=" sticky top-0 overflow-y-auto overflow-hidden pb-4 flex flex-col mx-3  lg:hidden ">
+    <aside className=" sticky top-0 overflow-y-auto overflow-hidden pb-4 mx-3 flex-col  lg:flex hidden ">
       <SmallSideBarItem Icon={Home} title="Home" url="/" />
       <SmallSideBarItem Icon={Repeat} title="Shorts" url="/" />
       <SmallSideBarItem Icon={Clapperboard} title="Subscriptions" url="/" />

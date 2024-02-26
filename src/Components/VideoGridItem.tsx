@@ -21,7 +21,7 @@ type VideoGridItemProps = {
 };
 
 export function VideoGridItem({
-  id,
+  // id,
   title,
   channel,
   views,
@@ -49,7 +49,7 @@ export function VideoGridItem({
       onMouseEnter={() => setIsVideoPlaying(true)}
       onMouseLeave={() => setIsVideoPlaying(false)}
     >
-      <a href={`/watch?v=${id}`} className="relative aspect-video">
+      <a href={videoUrl} className="relative aspect-video">
         <img
           src={thumbnailUrl}
           className={`block w-full h-full object-cover

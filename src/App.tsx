@@ -16,7 +16,7 @@ function App() {
         <SideBar />
 
         <div className="overflow-x-hidden mx-2">
-          <div className={" sticky top-0 bg-white z-10 pb-4"}>
+          <div className={" sticky top-0 bg-white z-10 pb-4 px-5"}>
             <CategoryPills
               categories={categories}
               selectedCategory={selectedCategory}
@@ -24,7 +24,7 @@ function App() {
             />
           </div>
           <div
-            className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] mr-10
+            className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] mr-10 ml-5
  "
           >
             {videos.map((video) => (
