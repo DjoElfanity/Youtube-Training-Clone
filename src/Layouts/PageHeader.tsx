@@ -11,7 +11,7 @@ import { useState } from "react";
 import { Button } from "../Components/Button";
 import Logo from "../assets/Logo.png";
 
-function PageHeader() {
+function PageHeader({ toggleSideBar }: { toggleSideBar: () => void }) {
   const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
   return (
     <div className="flex gap-10 lg:gap-20 justify-between mb-4 mt-2 mx-5">
@@ -21,7 +21,7 @@ function PageHeader() {
           showFullWidthSearch ? "hidden" : "flex"
         } `}
       >
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" onClick={toggleSideBar}>
           <MenuIcon />
         </Button>
 

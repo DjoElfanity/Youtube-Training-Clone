@@ -8,12 +8,19 @@ import { SideBar } from "./Layouts/SideBar";
 import { categories, videos } from "./data/home";
 
 function App() {
+  const [isSideBarVisible, setIsSideBarVisible] = useState(true);
+
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   return (
-    <div className="max-h-screen flex flex-col">
-      <PageHeader />
+    <div
+      className="max-h-screen flex flex-col
+"
+    >
+      <PageHeader
+        toggleSideBar={() => setIsSideBarVisible(!isSideBarVisible)}
+      />
       <div className={"grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto"}>
-        <SideBar />
+        <SideBar isVisible={isSideBarVisible} />
 
         <div className="overflow-x-hidden mx-2">
           <div className={" sticky top-0 bg-white z-10 pb-4 px-5"}>
